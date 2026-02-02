@@ -1,0 +1,67 @@
+{
+  "name": "OwoTọ́ọ̀mọ̀ - Gestionnaire Financier",
+  "short_name": "OwoTọ́ọ̀mọ̀",
+  "description": "Application de gestion financière personnelle avec système de tontine africain",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F97316",
+  "theme_color": "#F97316",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ajouter Transaction",
+      "short_name": "Transaction",
+      "description": "Ajouter une nouvelle transaction",
+      "url": "/?action=add-transaction",
+      "icons": [{ "src": "/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Voir Solde",
+      "short_name": "Solde",
+      "description": "Voir le solde actuel",
+      "url": "/?view=balance",
+      "icons": [{ "src": "/logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Tontines",
+      "short_name": "Tontines",
+      "description": "Gérer les tontines",
+      "url": "/tontine",
+      "icons": [{ "src": "/logo.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Vue desktop du tableau de bord"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vue mobile de l'application"
+    }
+  ]
+}
