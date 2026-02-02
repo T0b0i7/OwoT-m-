@@ -11,7 +11,6 @@ const languages = [
   { code: 'yo', name: 'Yoruba', nativeName: 'Èdè Yorùbá', icon: '🇳🇬', category: 'african' },
   { code: 'fon', name: 'Fon', nativeName: 'Fɔ́ngbè', icon: '🇧🇯', category: 'african' },
   { code: 'goun', name: 'Goun', nativeName: 'Gungbe', icon: '🇧🇯', category: 'african' },
-  { code: 'sw', name: 'Swahili', nativeName: 'Kiswahili', icon: '🇹🇿', category: 'african' },
   { code: 'wo', name: 'Wolof', nativeName: 'Wolof', icon: '🇸🇳', category: 'african' },
   { code: 'en', name: 'English', nativeName: 'English', icon: '🇬🇧', category: 'international' },
   { code: 'es', name: 'Español', nativeName: 'Español', icon: '🇪🇸', category: 'international' },
