@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* OwoTọ́ọ̀mọ̀ - Palette Béninoise 🇧🇯 */
+    --background: 0 0% 96%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Primary: Vert Espoir #008751 */
+    --primary: 156 100% 27%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 156 80% 35%;
+
+    /* Secondary: Jaune Richesse #FCD116 */
+    --secondary: 49 97% 54%;
+    --secondary-foreground: 0 0% 10%;
+
+    /* Muted: Gris Clair */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 29%;
+
+    /* Accent: Jaune Richesse clair */
+    --accent: 49 95% 65%;
+    --accent-foreground: 0 0% 10%;
+
+    /* Success: Vert Espoir */
+    --success: 156 100% 27%;
+    --success-foreground: 0 0% 100%;
+
+    /* Destructive: Rouge Courage #E8112D */
+    --destructive: 352 87% 49%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Income: Vert Espoir */
+    --income: 156 100% 27%;
+    --income-foreground: 0 0% 100%;
+
+    /* Expense: Rouge Courage */
+    --expense: 352 87% 49%;
+    --expense-foreground: 0 0% 100%;
+
+    /* Warning: Jaune Richesse */
+    --warning: 49 97% 54%;
+    --warning-foreground: 0 0% 10%;
+
+    /* Info: Bleu Sagesse */
+    --info: 210 58% 36%;
+    --info-foreground: 0 0% 100%;
+
+    /* Tontine: Violet Royal */
+    --tontine: 282 74% 35%;
+    --tontine-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 90%;
+    --ring: 156 100% 27%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(156, 100%, 27%) 0%, hsl(156, 80%, 35%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(49, 97%, 54%) 0%, hsl(49, 95%, 65%) 100%);
+    --gradient-danger: linear-gradient(135deg, hsl(352, 87%, 49%) 0%, hsl(352, 75%, 58%) 100%);
+    --gradient-tontine: linear-gradient(135deg, hsl(282, 74%, 35%) 0%, hsl(282, 60%, 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0, 0%, 96%) 0%, hsl(0, 0%, 94%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 10% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 10% / 0.12);
+    --shadow-lg: 0 16px 48px -12px hsl(0 0% 10% / 0.18);
+    --shadow-primary: 0 8px 24px -4px hsl(156 100% 27% / 0.35);
+    --shadow-secondary: 0 8px 24px -4px hsl(49 97% 54% / 0.35);
+    --shadow-danger: 0 8px 24px -4px hsl(352 87% 49% / 0.35);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 156 100% 27%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 49 97% 54%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 156 100% 27%;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 156 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 156 75% 42%;
+
+    --secondary: 49 90% 50%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 49 85% 55%;
+    --accent-foreground: 0 0% 10%;
+
+    --success: 156 85% 35%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 352 80% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --income: 156 85% 35%;
+    --income-foreground: 0 0% 100%;
+
+    --expense: 352 80% 50%;
+    --expense-foreground: 0 0% 100%;
+
+    --warning: 49 90% 50%;
+    --warning-foreground: 0 0% 10%;
+
+    --info: 210 55% 45%;
+    --info-foreground: 0 0% 100%;
+
+    --tontine: 282 65% 42%;
+    --tontine-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 156 85% 35%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(156, 85%, 32%) 0%, hsl(156, 75%, 40%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(49, 90%, 48%) 0%, hsl(49, 85%, 55%) 100%);
+    --gradient-danger: linear-gradient(135deg, hsl(352, 80%, 42%) 0%, hsl(352, 70%, 50%) 100%);
+    --gradient-tontine: linear-gradient(135deg, hsl(282, 65%, 38%) 0%, hsl(282, 55%, 48%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0, 0%, 7%) 0%, hsl(0, 0%, 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 13%) 0%, hsl(0, 0%, 10%) 100%);
+
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 16px 48px -12px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 156 85% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 49 90% 50%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 156 85% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Monospace for numbers */
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Mobile-first container */
+  .mobile-container {
+    @apply max-w-md mx-auto px-4 pb-24;
+    min-height: 100dvh;
+  }
+
+  /* Balance card gradient - Vert Espoir */
+  .balance-card {
+    background: var(--gradient-primary);
+    @apply text-white rounded-3xl p-6 shadow-lg;
+    box-shadow: var(--shadow-primary);
+  }
+
+  /* Secondary balance card - Jaune Richesse */
+  .balance-card-secondary {
+    background: var(--gradient-secondary);
+    @apply text-foreground rounded-3xl p-6 shadow-lg;
+    box-shadow: var(--shadow-secondary);
+  }
+
+  /* Tontine card gradient */
+  .tontine-gradient {
+    background: var(--gradient-tontine);
+    @apply text-white;
+  }
+
+  /* Category badge */
+  .category-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  /* Transaction item */
+  .transaction-item {
+    @apply flex items-center gap-4 p-4 rounded-2xl bg-card transition-all duration-200;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .transaction-item:active {
+    transform: scale(0.98);
+  }
+
+  /* Progress bar */
+  .budget-progress {
+    @apply h-3 rounded-full bg-muted overflow-hidden;
+  }
+
+  .budget-progress-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+  }
+
+  .budget-progress-fill.safe {
+    background: var(--gradient-primary);
+  }
+
+  .budget-progress-fill.warning {
+    background: var(--gradient-secondary);
+  }
+
+  .budget-progress-fill.danger {
+    background: var(--gradient-danger);
+  }
+
+  /* Bottom navigation */
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-card/95 backdrop-blur-lg border-t border-border;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 20px -4px hsl(0 0% 10% / 0.08);
+  }
+
+  .nav-item {
+    @apply flex flex-col items-center gap-1 py-2 px-4 text-muted-foreground transition-colors duration-200;
+  }
+
+  .nav-item.active {
+    @apply text-primary;
+  }
+
+  /* Floating action button - Jaune Richesse */
+  .fab {
+    @apply fixed z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg;
+    background: var(--gradient-secondary);
+    bottom: calc(4.5rem + env(safe-area-inset-bottom));
+    right: 1.25rem;
+    box-shadow: var(--shadow-secondary);
+  }
+
+  .fab:active {
+    transform: scale(0.95);
+  }
+
+  /* Amount display */
+  .amount-income {
+    @apply text-income font-semibold font-mono;
+  }
+
+  .amount-expense {
+    @apply text-expense font-semibold font-mono;
+  }
+
+  /* Card styles */
+  .stat-card {
+    background: var(--gradient-card);
+    @apply rounded-2xl p-4 border border-border/50;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Tontine specific */
+  .tontine-card {
+    @apply rounded-3xl p-5 bg-card border border-border/50;
+    box-shadow: var(--shadow-md);
+  }
+
+  .tontine-member {
+    @apply flex items-center gap-3 p-3 rounded-xl bg-muted/50;
+  }
+
+  /* Chart container */
+  .chart-container {
+    @apply rounded-2xl bg-card p-4 border border-border/50;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Input mobile optimized */
+  .input-mobile {
+    @apply h-14 text-lg rounded-xl bg-muted border-0 px-4;
+  }
+
+  .input-mobile:focus {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Flag stripe decoration */
+  .benin-stripe {
+    @apply flex h-1 w-full rounded-full overflow-hidden;
+  }
+
+  .benin-stripe::before {
+    content: '';
+    @apply flex-1 bg-primary;
+  }
+
+  .benin-stripe::after {
+    content: '';
+    @apply flex-1 bg-destructive;
+  }
+}
+
+@layer utilities {
+  /* Safe area padding for mobile */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text gradient - Vert */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Text gradient - Jaune */
+  .text-gradient-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Text gradient - Tontine */
+  .text-gradient-tontine {
+    background: var(--gradient-tontine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
