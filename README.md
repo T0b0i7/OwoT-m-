@@ -106,7 +106,7 @@ Détection automatique selon la langue du navigateur, avec stockage des préfér
 
 ```bash
 # Cloner le projet
-git clone <repository-url>
+git clone https://github.com/T0b0i7/OwoT-m-.git
 cd OwoTọ́ọ̀mọ̀
 
 # Installer les dépendances
@@ -247,6 +247,24 @@ Get-Process node | Stop-Process -Force
 - **Chargement suivant**: <1 seconde (cache)
 - **Mobile-first**: Optimisé pour écrans < 768px
 
+## 🌍 Contribution Africaine
+
+**OwoTọ́ọ̀mọ̀** est une fierté africaine qui valorise:
+
+- 🏛️ **Culture locale** - Intégration des traditions d'épargne africaines
+- 💰 **Système Tontine** - Valorisation des pratiques financières communautaires
+- 🌍 **Langues africaines** - Support du Yoruba, Fon, Goun, Swahili, Wolof
+- 📱 **Accessibilité** - Solution adaptée aux réalités économiques locales
+- 🤝 **Communauté** - Outil créé par et pour les Africains
+
+### 💾 Stockage Local
+
+L'application utilise un stockage local sécurisé pour:
+- 🔒 **Confidentialité** - Vos données restent sur votre appareil
+- ⚡ **Performance** - Accès instantané sans connexion internet
+- 💾 **Persistance** - Données sauvegardées même hors ligne
+- 🛡️ **Sécurité** - Chiffrement des informations sensibles
+
 ## 🤝 Contribution
 
 Les contributions sont bienvenues!
@@ -265,9 +283,9 @@ Ce projet est sous licence MIT. Voir [LICENSE](LICENSE) pour plus de détails.
 
 **Eucher ABATTI**
 
-- Portfolio: [À ajouter]
-- Email: [À ajouter]
-- GitHub: [À ajouter]
+- Portfolio: https://eucherdev-portfolio.netlify.app/
+- Email: abattieucher@gmail.com
+- GitHub: https://github.com/T0b0i7/
 
 ## 🙏 Remerciements
 
