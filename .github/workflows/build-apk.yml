@@ -1,0 +1,53 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build web app
+      run: npm run build
+
+    - name: Capacitor sync
+      run: npx cap sync
+
+    - name: Capacitor add android
+      run: npx cap add android
+
+    - name: Build Android APK
+      run: |
+        cd android
+        ./gradlew assembleDebug
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: OwoTọ́ọ̀mọ̀-APK
+        path: android/app/build/outputs/apk/debug/app-debug.apk
