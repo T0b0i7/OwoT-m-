@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Home, PieChart, Users, Target, Plus, Settings } from 'lucide-react';
+import { Home, PieChart, Users, Target, Plus, Settings, Languages } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
@@ -9,6 +9,7 @@ const navItems = [
   { path: '/budgets', icon: Target, label: 'Budget', sublabel: 'Budgets' },
   { path: '/tontine', icon: Users, label: 'Tontine', sublabel: 'Tontine' },
   { path: '/settings', icon: Settings, label: 'Params', sublabel: 'Paramètres' },
+  { path: '/contributeurs', icon: Languages, label: 'Contributeurs', sublabel: 'Espace Contributeurs' },
 ];
 
 interface BottomNavProps {

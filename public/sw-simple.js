@@ -78,4 +78,4 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-console.log(' Service Worker OwoTọ́ọ̀mọ̀ - Mode Hors Ligne Activé !');
+console.log('📱 Service Worker OwoTọ́ọ̀mọ̀ - Mode Hors Ligne Activé !');

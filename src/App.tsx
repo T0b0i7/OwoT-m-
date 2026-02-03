@@ -9,7 +9,9 @@ import StatsPage from "./pages/StatsPage";
 import BudgetsPage from "./pages/BudgetsPage";
 import TontinePage from "./pages/TontinePage";
 import SettingsPage from "./pages/SettingsPage";
+import SecretDashboard from "./pages/SecretDashboard";
 import NotFound from "./pages/NotFound";
+import ContributorSpace from "./pages/ContributorSpace";
 import { SplashScreen } from "./components/SplashScreen";
 import { Onboarding } from "./components/Onboarding";
 import { useStore } from "./store/useStore";
@@ -61,6 +63,8 @@ const App = () => {
               <Route path="/budgets" element={<BudgetsPage />} />
               <Route path="/tontine" element={<TontinePage />} />
               <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/admin-dashboard" element={<SecretDashboard />} />
+              <Route path="/contributeurs" element={<ContributorSpace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
