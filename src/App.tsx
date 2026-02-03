@@ -9,7 +9,7 @@ import StatsPage from "./pages/StatsPage";
 import BudgetsPage from "./pages/BudgetsPage";
 import TontinePage from "./pages/TontinePage";
 import SettingsPage from "./pages/SettingsPage";
-import SecretDashboard from "./pages/SecretDashboard";
+import SecretDashboard from "@/pages/SecretDashboard";
 import NotFound from "./pages/NotFound";
 import ContributorSpace from "./pages/ContributorSpace";
 import { SplashScreen } from "./components/SplashScreen";
