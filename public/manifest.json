@@ -1,7 +1,7 @@
 {
   "name": "OwoTọ́ọ̀mọ̀ - Gestionnaire Financier",
   "short_name": "OwoTọ́ọ̀mọ̀",
-  "description": "Application de gestion financière personnelle avec système de tontine africain",
+  "description": "Application de gestion financière personnelle avec système de tontine africain - 100% hors ligne",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F97316",
@@ -11,6 +11,7 @@
   "lang": "fr",
   "dir": "ltr",
   "categories": ["finance", "business", "productivity"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/logo.png",
@@ -63,5 +64,9 @@
       "form_factor": "narrow",
       "label": "Vue mobile de l'application"
     }
-  ]
+  ],
+  "serviceworker": {
+    "src": "/sw.js",
+    "scope": "/"
+  }
 }
